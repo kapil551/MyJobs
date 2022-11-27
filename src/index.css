@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply h-[100vh] bg-[#EDF6FF];
+  }
+}
+
 @layer components {
   .pageContainer {
     @apply h-[100vh] bg-[#EDF6FF];

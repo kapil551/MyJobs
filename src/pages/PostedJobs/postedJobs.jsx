@@ -100,7 +100,12 @@ function PostedJobs() {
                 }
             }).then((res) => {
                 console.log(res);
-                setJobApplicants(res.data.data);
+
+                if(res.data.data !== undefined) {
+                    setJobApplicants(res.data.data);
+                } else {
+                    setJobApplicants([]);
+                }
                 setShowApplicantsModal(true);
             }).catch((err) => {
                 console.log(err);
@@ -134,18 +139,18 @@ function PostedJobs() {
                                 {
                                     postedjobs.map((job) => {
                                         return (
-                                            <div key={job.id} className='h-[162px] w-[260px] bg-[#FFFFFF] shadow-[#557DA526] rounded-[5px] flex flex-col p-[15px]'>
+                                            <div key={job.id} className='h-[162px] w-[260px] bg-[#FFFFFF] shadow-[#557DA526] rounded-[5px] flex flex-col p-[15px] justify-between'>
                                                 <div>
-                                                    <p className='text-[17px] overflow-hidden text-ellipsis'>{job.title}</p>
-                                                    <p className='text-[12px] overflow-hidden text-ellipsis'>{job.description}</p>
+                                                    <p className='text-[17px] overflow-hidden text-ellipsis whitespace-nowrap text-[#303F60]'>{job.title}</p>
+                                                    <p className='text-[12px] overflow-hidden text-ellipsis opacity-80 h-[50px]'>{job.description}</p>
                                                 </div>
-                                                <div className='flex justify-between'>
-                                                    <p className='flex'>
-                                                        <img src={location} alt="" />
-                                                        <p className='text-[14px]'>{job.location}</p>
+                                                <div className='flex justify-between al'>
+                                                    <p className='flex items-center gap-[9px]'>
+                                                        <img src={location} alt="" className='h-[15px] w-[10px]'/>
+                                                        <p className='text-[14px] w-[60px] overflow-hidden text-ellipsis'>{job.location}</p>
                                                     </p>
 
-                                                    <p className='text-[12px] text-[#303F60] bg-[#43AFFF33] rounded-[5px] flex items-center justify-center cursor-pointer' onClick={() => getApplicantsData(job.id)}>
+                                                    <p className='text-[12px] text-[#303F60] bg-[#43AFFF33] rounded-[5px] flex items-center justify-center cursor-pointer px-[15px] py-[9px]' onClick={() => getApplicantsData(job.id)}>
                                                         View Application
                                                     </p>
                                                 </div>

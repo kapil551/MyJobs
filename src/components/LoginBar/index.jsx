@@ -15,7 +15,7 @@ function LoginBar({ loggedInRecruiter, setLoginModal, loginModal, setShowToast }
 
     return (
         <>
-            <div className='navbar h-[20%] flex justify-between items-center px-4 py-2'>
+            <div className='navbar h-[20%] flex justify-between items-center px-8 py-2'>
                 <div>
                     <img src={myJobs} alt="my-jobs" />
                 </div>
@@ -42,7 +42,7 @@ function LoginBar({ loggedInRecruiter, setLoginModal, loginModal, setShowToast }
 
                 </div>
             </div>
-            <div className='h-[1px] bg-[#4D618E] mt-[5px]'></div>
+            <div className='h-[1px] bg-[#4D618E] mt-[5px] w-[96%] mx-auto'></div>
         </>
     )
 }
