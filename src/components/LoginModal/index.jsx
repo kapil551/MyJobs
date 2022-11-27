@@ -1,14 +1,16 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 
-function LoginModal() {
+function LoginModal({setShowToast}) {
 
     const navigate = useNavigate();
 
 
     const handleLogout = () => {
         localStorage.removeItem('recruiter');
+        setShowToast(true);
         navigate('/');
+        
     }
   return (
     <div className='h-[47px] w-[112px] bg-[#ffffff] shadow-[#557DA526] rounded-[5px] fixed top-[5%] right-[1%] p-[12px]'>

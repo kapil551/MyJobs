@@ -4,11 +4,10 @@ import myJobs from "../../assets/images/MyJobs.svg";
 import caretDown from "../../assets/images/Icon awesome-caret-down.svg";
 import _isEmpty from "lodash/isEmpty";
 
-function LoginBar({ loggedInRecruiter, setLoginModal, loginModal, setShowToast }) {
+function LoginBar({ loggedInRecruiter, setLoginModal, loginModal}) {
     const navigate = useNavigate();
     const handleLogin = () => {
         navigate('/login');
-        setShowToast(true);
     }
 
     console.log(loggedInRecruiter);

@@ -15,7 +15,7 @@ import LoginModal from '../../components/LoginModal';
 function PostedJobs() {
     const [loggedInRecruiter, setLoggedInRecruiter] = useState({});
     const [postedjobs, setPostedJobs] = useState([]);
-    const [showToast, setShowToast] = useState(true);
+    const [showToast, setShowToast] = useState(false);
     const [page, setPage] = useState(0);
     const navigate = useNavigate();
     const [showApplicantsModal, setShowApplicantsModal] = useState(false);
@@ -26,6 +26,7 @@ function PostedJobs() {
         const loggedInRecruiter = JSON.parse(localStorage.getItem('recruiter'));
         if (loggedInRecruiter) {
             setLoggedInRecruiter(loggedInRecruiter);
+            setShowToast(true);
         }
     }, [])
 
@@ -186,7 +187,7 @@ function PostedJobs() {
                 showApplicantsModal && <Applicants jobApplicants={jobApplicants} setShowApplicantsModal={setShowApplicantsModal} />
             }
             {
-                loginModal && <LoginModal />
+                loginModal && <LoginModal setShowToast={setShowToast} />
             }
         </div>
     )
