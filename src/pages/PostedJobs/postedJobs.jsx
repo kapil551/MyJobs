@@ -121,7 +121,7 @@ function PostedJobs() {
             <div className='pageTopSection h-[210px]'>
                 <LoginBar loggedInRecruiter={loggedInRecruiter} setLoginModal={setLoginModal} loginModal={loginModal} />
             </div>
-            <div className='absolute top-[80px] left-[7%] flex flex-col justify-center w-[100%]'>
+            <div className='absolute top-[80px] left-[7%] flex flex-col justify-center'>
                 <div className='text-[12px] text-[#ffffff] flex items-center gap-[5px] cursor-pointer' onClick={goToHomePage}>
                     <p>
                         <img src={home} alt="" />

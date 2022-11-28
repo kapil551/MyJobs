@@ -21,11 +21,11 @@ function Applicants({jobApplicants, setShowApplicantsModal}) {
                 {
                     jobApplicants.length !== 0 ? (
                         <>
-                            <div className='bg-[#557DA526] flex flex-wrap gap-[30px] justify-center h-[420px] mx-[22px] pt-[9px] px-[7px] content-start rounded-[10px]'>
+                            <div className='bg-[#557DA526] flex flex-wrap gap-[30px] justify-center h-[420px] mx-[22px] py-[9px] px-[7px] content-start rounded-[10px] overflow-y-scroll'>
                                 {
                                     jobApplicants.map((applicant) => {
                                         return (
-                                            <div className='bg-[#ffffff] border border-[#303F6080] rounded-[5px] h-[159px] w-[302px] p-[14px] flex flex-col justify-around'>
+                                            <div className='bg-[#ffffff] border border-[#303F6080] rounded-[5px] h-[159px] w-[290px] p-[14px] flex flex-col justify-around'>
                                                 <div className='flex gap-[20px]'>
 
                                                     <div>
