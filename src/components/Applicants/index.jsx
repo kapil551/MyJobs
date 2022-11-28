@@ -21,7 +21,7 @@ function Applicants({jobApplicants, setShowApplicantsModal}) {
                 {
                     jobApplicants.length !== 0 ? (
                         <>
-                            <div className='bg-[#557DA526] flex flex-wrap gap-[30px] justify-center h-[420px] mx-[22px] py-[9px] px-[7px] content-start rounded-[10px] overflow-y-scroll'>
+                            <div className='bg-[#557DA526] flex flex-wrap gap-[30px] justify-center h-[420px] mx-[22px] py-[9px] px-[7px] content-start rounded-[10px] overflow-y-auto'>
                                 {
                                     jobApplicants.map((applicant) => {
                                         return (
@@ -47,7 +47,7 @@ function Applicants({jobApplicants, setShowApplicantsModal}) {
                             </div>
                         </>
                     ) : (
-                        <div className='bg-[#557DA526] flex flex-col gap-[20px] justify-center items-center h-[580px] mx-[22px] pt-[9px] px-[7px] content-start rounded-[10px]'>
+                        <div className='bg-[#557DA526] flex flex-col gap-[20px] justify-center items-center h-[420px] mx-[22px] pt-[9px] px-[7px] content-start rounded-[10px]'>
                             <img src={curriculum} alt="" />
                             <p className='text-[20px] text-[#303F60]'>No applications available!</p>
                         </div>
